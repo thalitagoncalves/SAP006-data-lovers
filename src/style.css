@@ -1,0 +1,34 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EE8B78;
+}
+
+.container {
+    text-align: center;
+    padding: 5em;
+}
+
+.cards {
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    border: 5px solid #F9C885;
+    border-radius: 9px;
+    margin: 20px;
+    height: 100%;
+}
+
+.font-lighter {
+    font-family: "Opens Sans", sans-serif;
+    font-weight: normal;
+}
+
+.introduction {
+    text-align: center;
+}
