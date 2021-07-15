@@ -1,21 +1,27 @@
-import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
+import { sortFilms, sortReverse } from './data.js'
 
 function showCards(data) {
     document.getElementById('container').innerHTML = data.map((films) => `
     <div class="cards">
+        <div>
         <h3>${films.title}</h3>
         <img src="${films.poster}">
-        <h4 class="font-lighter">Lançamento: ${films.release_date}</h4>
-        <h4 class="font-lighter">Avaliação: ${films.rt_score}</h4>
-        <div class="characters">
-        ${films.people.map((character) => `
-            <h4>${character.name}</h4>
-            <img src="${character.img}">
-        `)}
+        <h4>Lançamento: ${films.release_date}</h4>
+        <h4>Avaliação: ${films.rt_score}</h4>
+        </div>
+        <div class="text">
+            <h4>${films.description}</h4>
         </div>
     </div>
     `)
 }
 
-showCards(data.films)
+const films = data.films
+const higherScoreButton = document.getElementById('higher-score-btn');
+const lowerScoreButton = document.getElementById('lower-score-btn');
+
+showCards(films)
+
+higherScoreButton.addEventListener('click', () => showCards(sortReverse(films)))
+lowerScoreButton.addEventListener('click', () => showCards(sortFilms(films)))

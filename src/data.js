@@ -1,9 +1,4 @@
-// estas funciones son de ejemplo
+export const sortFilms = (data) => data.sort((a, b) => a.rt_score - b.rt_score);
 
-export const example = () => {
-  return 'example';
-};
+export const sortReverse = (data) => sortFilms(data).slice(0, 20).reverse()
 
-export const anotherExample = () => {
-  return 'OMG';
-};

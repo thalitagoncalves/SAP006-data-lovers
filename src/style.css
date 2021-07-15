@@ -2,6 +2,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: white;
+    background-attachment: fixed;
+    padding: 0%;
+    margin: 0%;
+    font-size: 100%;
+}
+
 .nav-bar {
     display: flex;
     align-items: center;
@@ -9,23 +17,52 @@
     background-color: #EE8B78;
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    list-style: none
+}
+
+nav ul li {
+    font-size: 18px;
+}
+
+  nav ul li a {
+    padding: 58px 30px;
+  }
+
+  nav ul li a:hover {
+    background: #F9C885;
+    color: #ffffff;
+    box-shadow: inset 3px 2px 3px #F9C885,
+      3px 2px 3px #F9C885;
+  }
+
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 5em;
+    flex-wrap: wrap;
 }
 
 .cards {
-    display: inline-block;
-    width: 300px;
-    border: 5px solid #F9C885;
+    display: flex;
+    align-items: center;
     border-radius: 9px;
-    margin: 20px;
+    padding: 20px;
     height: 100%;
+    width: 40%;
+    margin: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.font-lighter {
-    font-family: "Opens Sans", sans-serif;
-    font-weight: normal;
+.text {
+    padding: 20px;
 }
 
 .introduction {
@@ -34,4 +71,14 @@
 
 .characters {
     display: flex;
+}
+
+.filters {
+    display: flex;
+    justify-content: center
+}
+
+button {
+    padding: 5px;
+    margin: 5px;
 }

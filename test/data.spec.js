@@ -1,23 +1,23 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortFilms, sortReverse } from '../src/data.js';
+import { dataFilms, castleInTheSky, neighborTotoro, kikiDelivery, theTaleOfThePrincess } from './mock.js'
 
-
-describe('example', () => {
+describe('Sort movies by highest score', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sortReverse).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('Returns movies from highest to lowest score', () => {
+    expect(sortReverse(dataFilms)).toEqual([theTaleOfThePrincess, kikiDelivery, castleInTheSky, neighborTotoro]);
   });
 });
 
 
-describe('anotherExample', () => {
+describe('Sort movies by lowest score', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortFilms).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('Returns movies from lowest to highest score', () => {
+    expect(sortFilms(dataFilms)).toEqual([neighborTotoro, castleInTheSky, kikiDelivery, theTaleOfThePrincess]);
   });
 });

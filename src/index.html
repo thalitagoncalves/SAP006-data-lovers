@@ -14,16 +14,19 @@
       </div>
       <nav>
         <ul>
-          <a><button>HOME</button></a>
-          <a><button>SOBRE</button></a>
+          <li><a>HOME</a></li>
+          <li><a>PERSONAGENS</a></li>
+          <li><a>SOBRE</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h2 class="font-lighter introduction">Confira a filmografia do Studio Ghibli</h2>
-      <div id="container" class="container">
-        <div id="characters"></div>
-      </div>
+      <section class="filters">
+        <button id="higher-score-btn">Maior avaliação</button>
+        <button id="lower-score-btn">Menor avaliação</button>
+      </section>
+      <div id="container" class="container"></div>
     </main>
     <script src="main.js" type="module"></script>
   </body>
