@@ -7,5 +7,5 @@ export const filterByDirector = (data, conditionValue, type) => data.filter((fil
 })
 
 export const filterFilm = (data, search) => data.filter(film => {
-  return film.name.toLowerCase().includes(search.toLowerCase());
+  return film.title.toLowerCase().includes(search.toLowerCase());
 })

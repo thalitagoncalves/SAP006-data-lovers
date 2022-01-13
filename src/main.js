@@ -28,4 +28,9 @@ showCards(films)
 higherScoreButton.addEventListener('click', () => showCards(sortReverse(films)))
 lowerScoreButton.addEventListener('click', () => showCards(sortFilms(films)))
 chooseDirector.addEventListener('change', () => showCards(filterByDirector(films, chooseDirector.value, 'director')))
-findFilm.addEventListener('keypress', showCards(filterFilm(films, findFilm.value)))
+findFilm.addEventListener('keypress', () => showCards(filterFilm(films, findFilm.value)))
+findFilm.addEventListener("keydown", event => {
+  if (event.keyCode === 8) {
+    return showCards(films);
+  }
+})
